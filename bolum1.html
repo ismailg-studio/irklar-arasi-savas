@@ -2,108 +2,130 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>Irklar Arası Savaş | Bölüm 1</title>
+<title>Irklar Arası Savaş</title>
 
 <style>
+
 body{
     margin:0;
     background:#0b0b0b;
-    color:white;
     font-family:Arial,sans-serif;
-}
-
-.banner{
-    width:100%;
-    height:500px;
-    object-fit:cover;
-}
-
-.content{
-    max-width:1000px;
-    margin:auto;
-    padding:30px;
-}
-
-h1{
-    color:#e50914;
-    font-size:40px;
-}
-
-.ozet{
-    font-size:18px;
-    line-height:1.8;
-    color:#ddd;
-}
-
-.izle{
-    display:inline-block;
-    margin-top:25px;
-    padding:15px 30px;
-    background:#e50914;
     color:white;
-    text-decoration:none;
-    border-radius:8px;
+}
+
+/* INTRO */
+#intro{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    animation:fadeOut 3s forwards;
+}
+
+#intro h1{
+    color:#e50914;
+    font-size:42px;
+    letter-spacing:4px;
+}
+
+@keyframes fadeOut{
+    0%{opacity:1;}
+    80%{opacity:1;}
+    100%{opacity:0;visibility:hidden;}
+}
+
+header{
+    text-align:center;
+    font-size:32px;
+    padding:20px;
+    color:#e50914;
     font-weight:bold;
 }
 
-.geri{
-    display:inline-block;
-    margin-top:20px;
+.season{
+    margin:20px;
+}
+
+.season h2{
+    border-left:5px solid #e50914;
+    padding-left:10px;
+}
+
+.row{
+    display:flex;
+    overflow-x:auto;
+    gap:10px;
+    padding:10px 0;
+}
+
+.card{
+    min-width:160px;
+    background:#222;
+    border-radius:10px;
+    overflow:hidden;
+    flex-shrink:0;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+    background:#e50914;
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card p{
+    text-align:center;
     color:white;
+    font-weight:bold;
+}
+
+a{
     text-decoration:none;
 }
-</style>
 
+</style>
 </head>
 
 <body>
 
-<img src="bolum1.jpg" class="banner">
-
-<div class="content">
-
-<h1>Irklar Arası Savaş | Bölüm 1</h1>
-
-<div class="ozet">
-
-<p>
-Yıldızların ötesindeki uzak bir evrende, uzaylı ırkı büyük bir kırılmanın eşiğine gelir.
-Bir zamanlar aynı amaç uğruna birleşen topluluk, artık gizli planlar,
-karanlık ittifaklar ve derin ihanetlerle parçalanmaya başlamıştır.
-</p>
-
-<p>
-Güç dengeleri değişirken dostluklar sınanır, maskeler birer birer düşer.
-Farklı komutanlıklar kendi düzenlerini kurmak için harekete geçerken,
-yaklaşan çatışmanın ilk işaretleri ortaya çıkar.
-</p>
-
-<p>
-Artık savaş yalnızca cephelerde değil;
-düşüncelerde, kararlarda ve güven duygusunun içinde yaşanmaktadır.
-Büyük olayların habercisi olan ilk kıvılcım ateşlenirken,
-evren geri dönüşü olmayan bir yola girer.
-</p>
-
-<p><i>
-"Bazı sırlar vardır ki, bilinmek için değil,
-kaderi değiştirmemek için saklanır."
-</i></p>
-
+<div id="intro">
+<h1>IRKLAR ARASI SAVAŞ</h1>
 </div>
 
-<a class="izle"
-href="https://youtu.be/oFdAsPCF_nc?si=59PlxqbqqY4Ne4UM"
-target="_blank">
-▶ Bölümü İzle
+<header>IRKLAR ARASI SAVAŞ</header>
+
+<div class="season">
+<h2>SEZON 1</h2>
+
+<div class="row">
+
+<a href="bolum1.html">
+<div class="card">
+<img src="bolum1.jpg">
+<p>Bölüm 1</p>
+</div>
 </a>
 
-<br>
+<div class="card">
+<img src="bolum2.jpg">
+<p>Bölüm 2</p>
+</div>
 
-<a class="geri" href="index.html">
-← Ana Sayfaya Dön
-</a>
+<div class="card">
+<img src="bolum3.jpg">
+<p>Bölüm 3</p>
+</div>
 
+</div>
 </div>
 
 </body>
