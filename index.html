@@ -12,6 +12,31 @@ body{
     color:white;
 }
 
+/* INTRO */
+#intro{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    animation:fadeOut 3s forwards;
+}
+
+#intro h1{
+    color:#e50914;
+    font-size:42px;
+    letter-spacing:4px;
+}
+
+@keyframes fadeOut{
+    0%{opacity:1;}
+    80%{opacity:1;}
+    100%{opacity:0;visibility:hidden;}
+}
+
 /* HEADER */
 header{
     text-align:center;
@@ -36,6 +61,7 @@ header{
     display:flex;
     overflow-x:auto;
     gap:10px;
+    padding:10px 0;
 }
 
 /* CARD */
@@ -44,8 +70,10 @@ header{
     background:#222;
     border-radius:10px;
     overflow:hidden;
+    transition:0.3s;
     cursor:pointer;
-    transition:.3s;
+    flex-shrink:0;
+    text-align:center;
 }
 
 .card:hover{
@@ -60,37 +88,22 @@ header{
 }
 
 .card p{
-    text-align:center;
-    font-weight:bold;
+    margin:8px 0;
 }
 
-/* MODAL */
-#modal{
-    display:none;
-    position:fixed;
-    top:0;left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.9);
-    padding:40px;
-}
-
-#box{
-    background:#111;
-    padding:20px;
-    border-radius:10px;
-}
-
-button{
-    background:#e50914;
+a{
+    text-decoration:none;
     color:white;
-    padding:10px;
-    border:none;
 }
 </style>
 </head>
 
 <body>
+
+<!-- INTRO -->
+<div id="intro">
+<h1>IRKLAR ARASI SAVAŞ</h1>
+</div>
 
 <header>IRKLAR ARASI SAVAŞ</header>
 
@@ -99,17 +112,29 @@ button{
 <h2>SEZON 1</h2>
 <div class="row">
 
-<div class="card" onclick="openEp(1)">
+<a href="bolum1.html" class="card">
 <img src="bolum1.jpg"><p>Bölüm 1</p>
-</div>
+</a>
 
-<div class="card" onclick="openEp(2)">
+<a href="bolum2.html" class="card">
 <img src="bolum2.jpg"><p>Bölüm 2</p>
-</div>
+</a>
 
-<div class="card" onclick="openEp(3)">
+<a href="bolum3.html" class="card">
 <img src="bolum3.jpg"><p>Bölüm 3</p>
-</div>
+</a>
+
+<a href="bolum4.html" class="card">
+<img src="bolum4.jpg"><p>Bölüm 4</p>
+</a>
+
+<a href="bolum5.html" class="card">
+<img src="bolum5.jpg"><p>Bölüm 5</p>
+</a>
+
+<a href="bolum6.html" class="card">
+<img src="bolum6.jpg"><p>Bölüm 6</p>
+</a>
 
 </div>
 </div>
@@ -119,52 +144,132 @@ button{
 <h2>SEZON 2</h2>
 <div class="row">
 
-<div class="card" onclick="openEp(4)">
-<img src="bolum4.jpg"><p>Bölüm 4</p>
+<a href="bolum7.html" class="card">
+<img src="bolum7.jpg"><p>Bölüm 7</p>
+</a>
+
+<a href="bolum8.html" class="card">
+<img src="bolum8.jpg"><p>Bölüm 8</p>
+</a>
+
+<a href="bolum9.html" class="card">
+<img src="bolum9.jpg"><p>Bölüm 9</p>
+</a>
+
+<a href="bolum10.html" class="card">
+<img src="bolum10.jpg"><p>Bölüm 10</p>
+</a>
+
+<a href="bolum11.html" class="card">
+<img src="bolum11.jpg"><p>Bölüm 11</p>
+</a>
+
+<a href="bolum12.html" class="card">
+<img src="bolum12.jpg"><p>Bölüm 12</p>
+</a>
+
+</div>
 </div>
 
-<div class="card" onclick="openEp(5)">
-<img src="bolum5.jpg"><p>Bölüm 5</p>
+<!-- SEZON 3 -->
+<div class="season">
+<h2>SEZON 3</h2>
+<div class="row">
+
+<a href="bolum13.html" class="card">
+<img src="bolum13.jpg"><p>Bölüm 13</p>
+</a>
+
+<a href="bolum14.html" class="card">
+<img src="bolum14.jpg"><p>Bölüm 14</p>
+</a>
+
+<a href="bolum15.html" class="card">
+<img src="bolum15.jpg"><p>Bölüm 15</p>
+</a>
+
+<a href="bolum16.html" class="card">
+<img src="bolum16.jpg"><p>Bölüm 16</p>
+</a>
+
+</div>
 </div>
 
-<div class="card" onclick="openEp(6)">
-<img src="bolum6.jpg"><p>Bölüm 6</p>
-</div>
+<!-- SEZON 4 -->
+<div class="season">
+<h2>SEZON 4</h2>
+<div class="row">
+
+<a href="bolum17.html" class="card">
+<img src="bolum17.jpg"><p>Bölüm 17</p>
+</a>
+
+<a href="bolum18.html" class="card">
+<img src="bolum18.jpg"><p>Bölüm 18</p>
+</a>
 
 </div>
 </div>
 
-<!-- MODAL -->
-<div id="modal">
-<div id="box">
-<button onclick="closeEp()">Kapat</button>
-<h2 id="title"></h2>
-<p id="text"></p>
-<a id="yt" target="_blank">YouTube Aç</a>
+<!-- SEZON 5 -->
+<div class="season">
+<h2>SEZON 5</h2>
+<div class="row">
+
+<a href="bolum19.html" class="card">
+<img src="bolum19.jpg"><p>Bölüm 19</p>
+</a>
+
+<a href="bolum20.html" class="card">
+<img src="bolum20.jpg"><p>Bölüm 20</p>
+</a>
+
+<a href="bolum21.html" class="card">
+<img src="bolum21.jpg"><p>Bölüm 21</p>
+</a>
+
+<a href="bolum22.html" class="card">
+<img src="bolum22.jpg"><p>Bölüm 22</p>
+</a>
+
+<a href="bolum23.html" class="card">
+<img src="bolum23.jpg"><p>Bölüm 23</p>
+</a>
+
+<a href="bolum24.html" class="card">
+<img src="bolum24.jpg"><p>Bölüm 24</p>
+</a>
+
+<a href="bolum25.html" class="card">
+<img src="bolum25.jpg"><p>Bölüm 25</p>
+</a>
+
+<a href="bolum26.html" class="card">
+<img src="bolum26.jpg"><p>Bölüm 26</p>
+</a>
+
 </div>
 </div>
 
-<script>
-const data = {
-1:{t:"Bölüm 1", y:"https://youtu.be/oFdAsPCF_nc", d:"ÖZET 1 BURAYA"},
-2:{t:"Bölüm 2", y:"https://youtu.be/ym6mBdSHlhg", d:"ÖZET 2 BURAYA"},
-3:{t:"Bölüm 3", y:"https://youtu.be/4m2s1VbKIAs", d:"ÖZET 3 BURAYA"},
-4:{t:"Bölüm 4", y:"https://youtu.be/vOM12uOKEuE", d:"ÖZET 4 BURAYA"},
-5:{t:"Bölüm 5", y:"https://youtu.be/gIHNoDcTHaM", d:"ÖZET 5 BURAYA"},
-6:{t:"Bölüm 6", y:"https://youtu.be/M-ZyOE40OA4", d:"ÖZET 6 BURAYA"}
-};
+<!-- SEZON 6 -->
+<div class="season">
+<h2>SEZON 6</h2>
+<div class="row">
 
-function openEp(id){
-    document.getElementById("modal").style.display="block";
-    document.getElementById("title").innerText=data[id].t;
-    document.getElementById("text").innerText=data[id].d;
-    document.getElementById("yt").href=data[id].y;
-}
+<a href="bolum27.html" class="card">
+<img src="bolum27.jpg"><p>Bölüm 27</p>
+</a>
 
-function closeEp(){
-    document.getElementById("modal").style.display="none";
-}
-</script>
+<a href="bolum28.html" class="card">
+<img src="bolum28.jpg"><p>Bölüm 28</p>
+</a>
+
+<a href="bolum29.html" class="card">
+<img src="bolum29.jpg"><p>Bölüm 29</p>
+</a>
+
+</div>
+</div>
 
 </body>
 </html>
