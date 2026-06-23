@@ -5,36 +5,11 @@
 <title>Irklar Arası Savaş</title>
 
 <style>
-
 body{
     margin:0;
     background:#0b0b0b;
     font-family:Arial;
     color:white;
-}
-
-/* INTRO */
-#intro{
-    position:fixed;
-    inset:0;
-    background:black;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:9999;
-    animation:fadeOut 3s forwards;
-}
-
-#intro h1{
-    color:#e50914;
-    font-size:42px;
-    letter-spacing:4px;
-}
-
-@keyframes fadeOut{
-    0%{opacity:1;}
-    80%{opacity:1;}
-    100%{opacity:0;visibility:hidden;}
 }
 
 /* HEADER */
@@ -56,7 +31,7 @@ header{
     padding-left:10px;
 }
 
-/* ROW */
+/* SATIR */
 .row{
     display:flex;
     overflow-x:auto;
@@ -64,15 +39,15 @@ header{
     padding:10px 0;
 }
 
-/* CARD */
+/* KART */
 .card{
     min-width:160px;
     background:#222;
     border-radius:10px;
     overflow:hidden;
-    flex-shrink:0;
-    transition:0.3s;
     cursor:pointer;
+    transition:0.3s;
+    text-align:center;
 }
 
 .card:hover{
@@ -87,30 +62,43 @@ header{
 }
 
 .card p{
-    text-align:center;
     font-weight:bold;
-    margin:8px 0;
 }
 
-/* LINK FIX */
-a{
-    text-decoration:none;
+/* BÖLÜM PANELİ */
+#panel{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:#0b0b0b;
+    display:none;
+    padding:20px;
+}
+
+#close{
+    background:#e50914;
+    padding:10px 15px;
+    border:none;
     color:white;
-    display:block;
+    cursor:pointer;
+    margin-bottom:20px;
 }
-
 </style>
-
 </head>
 
 <body>
 
-<!-- INTRO -->
-<div id="intro">
-    <h1>IRKLAR ARASI SAVAŞ</h1>
-</div>
-
 <header>IRKLAR ARASI SAVAŞ</header>
+
+<!-- BÖLÜM PANELİ -->
+<div id="panel">
+    <button id="close" onclick="closePanel()">KAPAT</button>
+    <h2 id="title"></h2>
+    <a id="video" target="_blank" style="color:#e50914;">▶ YouTube Aç</a>
+    <p id="text"></p>
+</div>
 
 <!-- SEZON 1 -->
 <div class="season">
@@ -118,29 +106,56 @@ a{
 
 <div class="row">
 
-<a href="bolum1.html">
-<div class="card">
+<div class="card" onclick="openEp(1)">
 <img src="bolum1.jpg">
 <p>Bölüm 1</p>
 </div>
-</a>
 
-<a href="bolum2.html">
-<div class="card">
+<div class="card" onclick="openEp(2)">
 <img src="bolum2.jpg">
 <p>Bölüm 2</p>
 </div>
-</a>
 
-<a href="bolum3.html">
-<div class="card">
+<div class="card" onclick="openEp(3)">
 <img src="bolum3.jpg">
 <p>Bölüm 3</p>
 </div>
-</a>
 
 </div>
 </div>
+
+<script>
+
+const data = {
+1:{
+title:"Bölüm 1",
+video:"https://youtu.be/oFdAsPCF_nc",
+text:"Yıldızların ötesindeki uzak bir evrende büyük kırılma başlar..."
+},
+2:{
+title:"Bölüm 2",
+video:"https://youtu.be/ym6mBdSHlhg",
+text:"Baran ve Elif arasındaki gerilim artar..."
+},
+3:{
+title:"Bölüm 3",
+video:"https://youtu.be/4m2s1VbKIAs",
+text:"Yeni düşmanlar sahneye çıkar..."
+}
+};
+
+function openEp(id){
+    document.getElementById("panel").style.display="block";
+    document.getElementById("title").innerText=data[id].title;
+    document.getElementById("video").href=data[id].video;
+    document.getElementById("text").innerText=data[id].text;
+}
+
+function closePanel(){
+    document.getElementById("panel").style.display="none";
+}
+
+</script>
 
 </body>
 </html>
