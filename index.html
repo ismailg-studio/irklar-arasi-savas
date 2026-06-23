@@ -12,6 +12,7 @@ body{
     color:white;
 }
 
+/* HEADER */
 header{
     text-align:center;
     padding:20px;
@@ -19,6 +20,7 @@ header{
     color:#e50914;
 }
 
+/* SEZON */
 .season{
     margin:20px;
 }
@@ -28,6 +30,7 @@ header{
     padding-left:10px;
 }
 
+/* CARD */
 .row{
     display:flex;
     overflow-x:auto;
@@ -37,19 +40,45 @@ header{
 .card{
     min-width:160px;
     background:#222;
-    padding:10px;
     border-radius:10px;
     text-align:center;
+    cursor:pointer;
     transition:0.3s;
 }
 
 .card:hover{
     background:#e50914;
+    transform:scale(1.05);
 }
 
-a{
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+/* POPUP */
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:black;
+    padding:20px;
+    overflow:auto;
+}
+
+.popup img{
+    width:100%;
+    max-width:500px;
+}
+
+.close{
     color:white;
-    text-decoration:none;
+    font-size:25px;
+    cursor:pointer;
 }
 </style>
 </head>
@@ -62,72 +91,71 @@ a{
 <div class="season">
 <h2>SEZON 1</h2>
 <div class="row">
-<a class="card" href="bolum1.html">Bölüm 1</a>
-<a class="card" href="bolum2.html">Bölüm 2</a>
-<a class="card" href="bolum3.html">Bölüm 3</a>
+
+<div class="card" onclick="openEp(1)">
+<img src="bolum1.jpg">
+<p>Bölüm 1</p>
+</div>
+
+<div class="card" onclick="openEp(2)">
+<img src="bolum2.jpg">
+<p>Bölüm 2</p>
+</div>
+
+<div class="card" onclick="openEp(3)">
+<img src="bolum3.jpg">
+<p>Bölüm 3</p>
+</div>
+
 </div>
 </div>
 
-<!-- SEZON 2 -->
-<div class="season">
-<h2>SEZON 2</h2>
-<div class="row">
-<a class="card" href="bolum4.html">Bölüm 4</a>
-<a class="card" href="bolum5.html">Bölüm 5</a>
-<a class="card" href="bolum6.html">Bölüm 6</a>
-</div>
+<!-- POPUP -->
+<div id="popup" class="popup">
+<div class="close" onclick="closeEp()">KAPAT ✖</div>
+
+<h2 id="title"></h2>
+<img id="img">
+<p id="text"></p>
+<a id="video" target="_blank" style="color:#e50914;">YouTube Aç</a>
 </div>
 
-<!-- SEZON 3 -->
-<div class="season">
-<h2>SEZON 3</h2>
-<div class="row">
-<a class="card" href="bolum7.html">Bölüm 7</a>
-<a class="card" href="bolum8.html">Bölüm 8</a>
-<a class="card" href="bolum9.html">Bölüm 9</a>
-<a class="card" href="bolum10.html">Bölüm 10</a>
-<a class="card" href="bolum11.html">Bölüm 11</a>
-<a class="card" href="bolum12.html">Bölüm 12</a>
-<a class="card" href="bolum13.html">Bölüm 13</a>
-<a class="card" href="bolum14.html">Bölüm 14</a>
-<a class="card" href="bolum15.html">Bölüm 15</a>
-<a class="card" href="bolum16.html">Bölüm 16</a>
-</div>
-</div>
+<script>
 
-<!-- SEZON 4 -->
-<div class="season">
-<h2>SEZON 4</h2>
-<div class="row">
-<a class="card" href="bolum17.html">Bölüm 17</a>
-<a class="card" href="bolum18.html">Bölüm 18</a>
-</div>
-</div>
+const data = {
+1:{
+title:"Bölüm 1",
+img:"bolum1.jpg",
+text:"Yıldızların ötesinde büyük kırılma başlar...",
+video:"https://youtu.be/oFdAsPCF_nc"
+},
+2:{
+title:"Bölüm 2",
+img:"bolum2.jpg",
+text:"Baran ve Elif arasındaki gerilim artar...",
+video:"https://youtu.be/ym6mBdSHlhg"
+},
+3:{
+title:"Bölüm 3",
+img:"bolum3.jpg",
+text:"Yeni düşmanlar ortaya çıkar...",
+video:"https://youtu.be/4m2s1VbKIAs"
+}
+};
 
-<!-- SEZON 5 -->
-<div class="season">
-<h2>SEZON 5</h2>
-<div class="row">
-<a class="card" href="bolum19.html">Bölüm 19</a>
-<a class="card" href="bolum20.html">Bölüm 20</a>
-<a class="card" href="bolum21.html">Bölüm 21</a>
-<a class="card" href="bolum22.html">Bölüm 22</a>
-<a class="card" href="bolum23.html">Bölüm 23</a>
-<a class="card" href="bolum24.html">Bölüm 24</a>
-<a class="card" href="bolum25.html">Bölüm 25</a>
-<a class="card" href="bolum26.html">Bölüm 26</a>
-</div>
-</div>
+function openEp(id){
+document.getElementById("popup").style.display="block";
+document.getElementById("title").innerText=data[id].title;
+document.getElementById("img").src=data[id].img;
+document.getElementById("text").innerText=data[id].text;
+document.getElementById("video").href=data[id].video;
+}
 
-<!-- SEZON 6 -->
-<div class="season">
-<h2>SEZON 6</h2>
-<div class="row">
-<a class="card" href="bolum27.html">Bölüm 27</a>
-<a class="card" href="bolum28.html">Bölüm 28</a>
-<a class="card" href="bolum29.html">Bölüm 29</a>
-</div>
-</div>
+function closeEp(){
+document.getElementById("popup").style.display="none";
+}
+
+</script>
 
 </body>
 </html>
