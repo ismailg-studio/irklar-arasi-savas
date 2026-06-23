@@ -28,22 +28,14 @@ body{
 #intro h1{
     color:#e50914;
     font-size:42px;
-    letter-spacing:4px;
-}
-
-@keyframes fadeOut{
-    0%{opacity:1;}
-    80%{opacity:1;}
-    100%{opacity:0;visibility:hidden;}
 }
 
 /* HEADER */
 header{
     text-align:center;
-    font-size:32px;
+    font-size:30px;
     padding:20px;
     color:#e50914;
-    font-weight:bold;
 }
 
 /* SEZON */
@@ -56,220 +48,108 @@ header{
     padding-left:10px;
 }
 
-/* ROW */
 .row{
     display:flex;
     overflow-x:auto;
     gap:10px;
-    padding:10px 0;
 }
 
-/* CARD */
 .card{
     min-width:160px;
     background:#222;
+    padding:10px;
     border-radius:10px;
-    overflow:hidden;
-    transition:0.3s;
     cursor:pointer;
-    flex-shrink:0;
-    text-align:center;
 }
-
-.card:hover{
-    transform:scale(1.05);
-    background:#e50914;
-}
-
-.card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.card p{
-    margin:8px 0;
-}
-
-a{
-    text-decoration:none;
-    color:white;
-}
+.card:hover{background:#e50914;}
 </style>
 </head>
 
 <body>
 
-<!-- INTRO -->
 <div id="intro">
 <h1>IRKLAR ARASI SAVAŞ</h1>
 </div>
 
 <header>IRKLAR ARASI SAVAŞ</header>
 
-<!-- SEZON 1 -->
+<!-- SEZON 1 (1-3) -->
 <div class="season">
 <h2>SEZON 1</h2>
 <div class="row">
-
-<a href="bolum1.html" class="card">
-<img src="bolum1.jpg"><p>Bölüm 1</p>
-</a>
-
-<a href="bolum2.html" class="card">
-<img src="bolum2.jpg"><p>Bölüm 2</p>
-</a>
-
-<a href="bolum3.html" class="card">
-<img src="bolum3.jpg"><p>Bölüm 3</p>
-</a>
-
-<a href="bolum4.html" class="card">
-<img src="bolum4.jpg"><p>Bölüm 4</p>
-</a>
-
-<a href="bolum5.html" class="card">
-<img src="bolum5.jpg"><p>Bölüm 5</p>
-</a>
-
-<a href="bolum6.html" class="card">
-<img src="bolum6.jpg"><p>Bölüm 6</p>
-</a>
-
+<div class="card" onclick="openEp(1)">Bölüm 1</div>
+<div class="card" onclick="openEp(2)">Bölüm 2</div>
+<div class="card" onclick="openEp(3)">Bölüm 3</div>
 </div>
 </div>
 
-<!-- SEZON 2 -->
+<!-- SEZON 2 (4-6) -->
 <div class="season">
 <h2>SEZON 2</h2>
 <div class="row">
-
-<a href="bolum7.html" class="card">
-<img src="bolum7.jpg"><p>Bölüm 7</p>
-</a>
-
-<a href="bolum8.html" class="card">
-<img src="bolum8.jpg"><p>Bölüm 8</p>
-</a>
-
-<a href="bolum9.html" class="card">
-<img src="bolum9.jpg"><p>Bölüm 9</p>
-</a>
-
-<a href="bolum10.html" class="card">
-<img src="bolum10.jpg"><p>Bölüm 10</p>
-</a>
-
-<a href="bolum11.html" class="card">
-<img src="bolum11.jpg"><p>Bölüm 11</p>
-</a>
-
-<a href="bolum12.html" class="card">
-<img src="bolum12.jpg"><p>Bölüm 12</p>
-</a>
-
+<div class="card" onclick="openEp(4)">Bölüm 4</div>
+<div class="card" onclick="openEp(5)">Bölüm 5</div>
+<div class="card" onclick="openEp(6)">Bölüm 6</div>
 </div>
 </div>
 
-<!-- SEZON 3 -->
+<!-- SEZON 3 (7-16) -->
 <div class="season">
 <h2>SEZON 3</h2>
 <div class="row">
-
-<a href="bolum13.html" class="card">
-<img src="bolum13.jpg"><p>Bölüm 13</p>
-</a>
-
-<a href="bolum14.html" class="card">
-<img src="bolum14.jpg"><p>Bölüm 14</p>
-</a>
-
-<a href="bolum15.html" class="card">
-<img src="bolum15.jpg"><p>Bölüm 15</p>
-</a>
-
-<a href="bolum16.html" class="card">
-<img src="bolum16.jpg"><p>Bölüm 16</p>
-</a>
-
+<div class="card" onclick="openEp(7)">Bölüm 7</div>
+<div class="card" onclick="openEp(8)">Bölüm 8</div>
+<div class="card" onclick="openEp(9)">Bölüm 9</div>
+<div class="card" onclick="openEp(10)">Bölüm 10</div>
+<div class="card" onclick="openEp(11)">Bölüm 11</div>
+<div class="card" onclick="openEp(12)">Bölüm 12</div>
+<div class="card" onclick="openEp(13)">Bölüm 13</div>
+<div class="card" onclick="openEp(14)">Bölüm 14</div>
+<div class="card" onclick="openEp(15)">Bölüm 15</div>
+<div class="card" onclick="openEp(16)">Bölüm 16</div>
 </div>
 </div>
 
-<!-- SEZON 4 -->
+<!-- SEZON 4 (17-18) -->
 <div class="season">
 <h2>SEZON 4</h2>
 <div class="row">
-
-<a href="bolum17.html" class="card">
-<img src="bolum17.jpg"><p>Bölüm 17</p>
-</a>
-
-<a href="bolum18.html" class="card">
-<img src="bolum18.jpg"><p>Bölüm 18</p>
-</a>
-
+<div class="card" onclick="openEp(17)">Bölüm 17</div>
+<div class="card" onclick="openEp(18)">Bölüm 18</div>
 </div>
 </div>
 
-<!-- SEZON 5 -->
+<!-- SEZON 5 (19-26) -->
 <div class="season">
 <h2>SEZON 5</h2>
 <div class="row">
-
-<a href="bolum19.html" class="card">
-<img src="bolum19.jpg"><p>Bölüm 19</p>
-</a>
-
-<a href="bolum20.html" class="card">
-<img src="bolum20.jpg"><p>Bölüm 20</p>
-</a>
-
-<a href="bolum21.html" class="card">
-<img src="bolum21.jpg"><p>Bölüm 21</p>
-</a>
-
-<a href="bolum22.html" class="card">
-<img src="bolum22.jpg"><p>Bölüm 22</p>
-</a>
-
-<a href="bolum23.html" class="card">
-<img src="bolum23.jpg"><p>Bölüm 23</p>
-</a>
-
-<a href="bolum24.html" class="card">
-<img src="bolum24.jpg"><p>Bölüm 24</p>
-</a>
-
-<a href="bolum25.html" class="card">
-<img src="bolum25.jpg"><p>Bölüm 25</p>
-</a>
-
-<a href="bolum26.html" class="card">
-<img src="bolum26.jpg"><p>Bölüm 26</p>
-</a>
-
+<div class="card" onclick="openEp(19)">Bölüm 19</div>
+<div class="card" onclick="openEp(20)">Bölüm 20</div>
+<div class="card" onclick="openEp(21)">Bölüm 21</div>
+<div class="card" onclick="openEp(22)">Bölüm 22</div>
+<div class="card" onclick="openEp(23)">Bölüm 23</div>
+<div class="card" onclick="openEp(24)">Bölüm 24</div>
+<div class="card" onclick="openEp(25)">Bölüm 25</div>
+<div class="card" onclick="openEp(26)">Bölüm 26</div>
 </div>
 </div>
 
-<!-- SEZON 6 -->
+<!-- SEZON 6 (27-29) -->
 <div class="season">
 <h2>SEZON 6</h2>
 <div class="row">
-
-<a href="bolum27.html" class="card">
-<img src="bolum27.jpg"><p>Bölüm 27</p>
-</a>
-
-<a href="bolum28.html" class="card">
-<img src="bolum28.jpg"><p>Bölüm 28</p>
-</a>
-
-<a href="bolum29.html" class="card">
-<img src="bolum29.jpg"><p>Bölüm 29</p>
-</a>
-
+<div class="card" onclick="openEp(27)">Bölüm 27</div>
+<div class="card" onclick="openEp(28)">Bölüm 28</div>
+<div class="card" onclick="openEp(29)">Bölüm 29</div>
 </div>
 </div>
+
+<script>
+function openEp(num){
+    // burada tek sayfa sistemi var:
+    window.location.href = "bolum" + num + ".html";
+}
+</script>
 
 </body>
 </html>
