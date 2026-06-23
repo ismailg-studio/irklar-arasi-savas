@@ -12,38 +12,16 @@ body{
     color:white;
 }
 
-/* INTRO */
-#intro{
-    position:fixed;
-    width:100%;
-    height:100vh;
-    background:black;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:9999;
-    animation:fadeOut 3s forwards;
-}
-
-#intro h1{
-    color:#e50914;
-    font-size:42px;
-}
-
-@keyframes fadeOut{
-    0%{opacity:1;}
-    80%{opacity:1;}
-    100%{opacity:0;visibility:hidden;}
-}
-
+/* HEADER */
 header{
     text-align:center;
-    font-size:30px;
+    font-size:32px;
     padding:20px;
     color:#e50914;
     font-weight:bold;
 }
 
+/* SEZON */
 .season{
     margin:20px;
 }
@@ -53,37 +31,51 @@ header{
     padding-left:10px;
 }
 
+/* ROW */
 .row{
     display:flex;
     overflow-x:auto;
     gap:10px;
 }
 
+/* CARD */
 .card{
     min-width:160px;
     background:#222;
-    padding:10px;
-    cursor:pointer;
     border-radius:10px;
-    text-align:center;
+    overflow:hidden;
+    cursor:pointer;
+    transition:.3s;
 }
 
 .card:hover{
+    transform:scale(1.05);
     background:#e50914;
 }
 
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card p{
+    text-align:center;
+    font-weight:bold;
+}
+
+/* MODAL */
 #modal{
+    display:none;
     position:fixed;
     top:0;left:0;
     width:100%;
     height:100%;
     background:rgba(0,0,0,0.9);
-    display:none;
     padding:40px;
-    overflow:auto;
 }
 
-#modalContent{
+#box{
     background:#111;
     padding:20px;
     border-radius:10px;
@@ -92,61 +84,59 @@ header{
 button{
     background:#e50914;
     color:white;
-    border:none;
     padding:10px;
-    cursor:pointer;
+    border:none;
 }
 </style>
 </head>
 
 <body>
 
-<div id="intro">
-<h1>IRKLAR ARASI SAVAŞ</h1>
-</div>
-
 <header>IRKLAR ARASI SAVAŞ</header>
 
-<!-- SEZONLAR -->
+<!-- SEZON 1 -->
 <div class="season">
-<h2>SEZONLAR</h2>
-
+<h2>SEZON 1</h2>
 <div class="row">
-<div class="card" onclick="openEp(1)">Bölüm 1</div>
-<div class="card" onclick="openEp(2)">Bölüm 2</div>
-<div class="card" onclick="openEp(3)">Bölüm 3</div>
-<div class="card" onclick="openEp(4)">Bölüm 4</div>
-<div class="card" onclick="openEp(5)">Bölüm 5</div>
-<div class="card" onclick="openEp(6)">Bölüm 6</div>
-<div class="card" onclick="openEp(7)">Bölüm 7</div>
-<div class="card" onclick="openEp(8)">Bölüm 8</div>
-<div class="card" onclick="openEp(9)">Bölüm 9</div>
-<div class="card" onclick="openEp(10)">Bölüm 10</div>
-<div class="card" onclick="openEp(11)">Bölüm 11</div>
-<div class="card" onclick="openEp(12)">Bölüm 12</div>
-<div class="card" onclick="openEp(13)">Bölüm 13</div>
-<div class="card" onclick="openEp(14)">Bölüm 14</div>
-<div class="card" onclick="openEp(15)">Bölüm 15</div>
-<div class="card" onclick="openEp(16)">Bölüm 16</div>
-<div class="card" onclick="openEp(17)">Bölüm 17</div>
-<div class="card" onclick="openEp(18)">Bölüm 18</div>
-<div class="card" onclick="openEp(19)">Bölüm 19</div>
-<div class="card" onclick="openEp(20)">Bölüm 20</div>
-<div class="card" onclick="openEp(21)">Bölüm 21</div>
-<div class="card" onclick="openEp(22)">Bölüm 22</div>
-<div class="card" onclick="openEp(23)">Bölüm 23</div>
-<div class="card" onclick="openEp(24)">Bölüm 24</div>
-<div class="card" onclick="openEp(25)">Bölüm 25</div>
-<div class="card" onclick="openEp(26)">Bölüm 26</div>
-<div class="card" onclick="openEp(27)">Bölüm 27</div>
-<div class="card" onclick="openEp(28)">Bölüm 28</div>
-<div class="card" onclick="openEp(29)">Bölüm 29</div>
+
+<div class="card" onclick="openEp(1)">
+<img src="bolum1.jpg"><p>Bölüm 1</p>
+</div>
+
+<div class="card" onclick="openEp(2)">
+<img src="bolum2.jpg"><p>Bölüm 2</p>
+</div>
+
+<div class="card" onclick="openEp(3)">
+<img src="bolum3.jpg"><p>Bölüm 3</p>
+</div>
+
+</div>
+</div>
+
+<!-- SEZON 2 -->
+<div class="season">
+<h2>SEZON 2</h2>
+<div class="row">
+
+<div class="card" onclick="openEp(4)">
+<img src="bolum4.jpg"><p>Bölüm 4</p>
+</div>
+
+<div class="card" onclick="openEp(5)">
+<img src="bolum5.jpg"><p>Bölüm 5</p>
+</div>
+
+<div class="card" onclick="openEp(6)">
+<img src="bolum6.jpg"><p>Bölüm 6</p>
+</div>
+
 </div>
 </div>
 
 <!-- MODAL -->
 <div id="modal">
-<div id="modalContent">
+<div id="box">
 <button onclick="closeEp()">Kapat</button>
 <h2 id="title"></h2>
 <p id="text"></p>
@@ -155,32 +145,13 @@ button{
 </div>
 
 <script>
-
 const data = {
-
-1:{t:"Bölüm 1", y:"https://youtu.be/oFdAsPCF_nc?si=59PlxqbqqY4Ne4UM",
-d:`Yıldızların ötesindeki uzak evrende uzaylı ırkı büyük bir kırılmanın eşiğine gelir... (senin metin aynen)`},
-
-2:{t:"Bölüm 2", y:"https://youtu.be/ym6mBdSHlhg?si=Jn_2jKsF6b3uqR9h",
-d:`Baran'ın attığı adımlar çevresindekileri harekete geçirir... (senin metin aynen)`},
-
-3:{t:"Bölüm 3", y:"https://youtu.be/4m2s1VbKIAs?si=gYqu3Uv99gzmCg8P",
-d:`Evrenin dengeleri değişir... (senin metin aynen)`},
-
-4:{t:"Bölüm 4", y:"https://youtu.be/vOM12uOKEuE?si=O3iBiveDLGbfPjwi",
-d:`Kadın, Mavi ve Mor ırk sahneye çıkar...`},
-
-5:{t:"Bölüm 5", y:"https://youtu.be/gIHNoDcTHaM?si=aax4Onwo907Cv43j",
-d:`Kadın Irkı tamamlanır...`},
-
-6:{t:"Bölüm 6", y:"https://youtu.be/M-ZyOE40OA4?si=OwoGUd0EqiQe4WMW",
-d:`Rain tehdidi başlar...`},
-
-/* ... BURAYA SENİN TÜM ÖZETLERİN AYNEN DEVAM EDECEK ... */
-
-29:{t:"Bölüm 29", y:"https://youtu.be/K9ZScKaUrgw?si=sPFCfOp2nbw5YN-d",
-d:`Leyla ve Orhan geçmişi... (senin full metin)`}
-
+1:{t:"Bölüm 1", y:"https://youtu.be/oFdAsPCF_nc", d:"ÖZET 1 BURAYA"},
+2:{t:"Bölüm 2", y:"https://youtu.be/ym6mBdSHlhg", d:"ÖZET 2 BURAYA"},
+3:{t:"Bölüm 3", y:"https://youtu.be/4m2s1VbKIAs", d:"ÖZET 3 BURAYA"},
+4:{t:"Bölüm 4", y:"https://youtu.be/vOM12uOKEuE", d:"ÖZET 4 BURAYA"},
+5:{t:"Bölüm 5", y:"https://youtu.be/gIHNoDcTHaM", d:"ÖZET 5 BURAYA"},
+6:{t:"Bölüm 6", y:"https://youtu.be/M-ZyOE40OA4", d:"ÖZET 6 BURAYA"}
 };
 
 function openEp(id){
@@ -193,7 +164,6 @@ function openEp(id){
 function closeEp(){
     document.getElementById("modal").style.display="none";
 }
-
 </script>
 
 </body>
