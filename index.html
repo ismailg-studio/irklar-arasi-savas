@@ -6,7 +6,6 @@
 
 <style>
 
-/* ===== GENEL ===== */
 body{
     margin:0;
     background:#0b0b0b;
@@ -14,11 +13,10 @@ body{
     color:white;
 }
 
-/* ===== INTRO ===== */
+/* INTRO */
 #intro{
     position:fixed;
-    width:100%;
-    height:100vh;
+    inset:0;
     background:black;
     display:flex;
     justify-content:center;
@@ -31,12 +29,6 @@ body{
     color:#e50914;
     font-size:42px;
     letter-spacing:4px;
-    animation:zoom 2s ease;
-}
-
-@keyframes zoom{
-    0%{transform:scale(0.5);opacity:0;}
-    100%{transform:scale(1);opacity:1;}
 }
 
 @keyframes fadeOut{
@@ -45,17 +37,16 @@ body{
     100%{opacity:0;visibility:hidden;}
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header{
     text-align:center;
     font-size:32px;
     padding:20px;
     color:#e50914;
     font-weight:bold;
-    letter-spacing:2px;
 }
 
-/* ===== SEZON ===== */
+/* SEZON */
 .season{
     margin:20px;
 }
@@ -65,7 +56,7 @@ header{
     padding-left:10px;
 }
 
-/* ===== ROW ===== */
+/* ROW */
 .row{
     display:flex;
     overflow-x:auto;
@@ -73,7 +64,7 @@ header{
     padding:10px 0;
 }
 
-/* ===== CARD ===== */
+/* CARD */
 .card{
     min-width:160px;
     background:#222;
@@ -81,7 +72,6 @@ header{
     overflow:hidden;
     flex-shrink:0;
     transition:0.3s;
-    text-align:center;
     cursor:pointer;
 }
 
@@ -97,11 +87,20 @@ header{
 }
 
 .card p{
-    margin:8px 0;
+    text-align:center;
     font-weight:bold;
+    margin:8px 0;
+}
+
+/* LINK FIX */
+a{
+    text-decoration:none;
+    color:white;
+    display:block;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -119,73 +118,26 @@ header{
 
 <div class="row">
 
-<div class="card" onclick="location.href='bolum1.html'">
-    <img src="bolum1.jpg">
-    <p>Bölüm 1</p>
+<a href="bolum1.html">
+<div class="card">
+<img src="bolum1.jpg">
+<p>Bölüm 1</p>
 </div>
+</a>
 
-<div class="card" onclick="location.href='bolum2.html'">
-    <img src="bolum2.jpg">
-    <p>Bölüm 2</p>
+<a href="bolum2.html">
+<div class="card">
+<img src="bolum2.jpg">
+<p>Bölüm 2</p>
 </div>
+</a>
 
-<div class="card" onclick="location.href='bolum3.html'">
-    <img src="bolum3.jpg">
-    <p>Bölüm 3</p>
+<a href="bolum3.html">
+<div class="card">
+<img src="bolum3.jpg">
+<p>Bölüm 3</p>
 </div>
-
-</div>
-</div>
-
-<!-- SEZON 2 -->
-<div class="season">
-<h2>SEZON 2</h2>
-
-<div class="row">
-
-<div class="card" onclick="location.href='bolum4.html'">
-    <img src="bolum4.jpg">
-    <p>Bölüm 4</p>
-</div>
-
-<div class="card" onclick="location.href='bolum5.html'">
-    <img src="bolum5.jpg">
-    <p>Bölüm 5</p>
-</div>
-
-<div class="card" onclick="location.href='bolum6.html'">
-    <img src="bolum6.jpg">
-    <p>Bölüm 6</p>
-</div>
-
-</div>
-</div>
-
-<!-- SEZON 3 -->
-<div class="season">
-<h2>SEZON 3</h2>
-
-<div class="row">
-
-<div class="card" onclick="location.href='bolum7.html'">
-    <img src="bolum7.jpg">
-    <p>Bölüm 7</p>
-</div>
-
-<div class="card" onclick="location.href='bolum8.html'">
-    <img src="bolum8.jpg">
-    <p>Bölüm 8</p>
-</div>
-
-<div class="card" onclick="location.href='bolum9.html'">
-    <img src="bolum9.jpg">
-    <p>Bölüm 9</p>
-</div>
-
-<div class="card" onclick="location.href='bolum10.html'">
-    <img src="bolum10.jpg">
-    <p>Bölüm 10</p>
-</div>
+</a>
 
 </div>
 </div>
