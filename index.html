@@ -5,6 +5,7 @@
 <title>Irklar Arası Savaş</title>
 
 <style>
+
 body{
     margin:0;
     background:#0b0b0b;
@@ -12,6 +13,32 @@ body{
     color:white;
 }
 
+/* INTRO */
+#intro{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    animation:fadeOut 3s forwards;
+}
+
+#intro h1{
+    color:#e50914;
+    font-size:42px;
+    letter-spacing:4px;
+}
+
+@keyframes fadeOut{
+    0%{opacity:1;}
+    80%{opacity:1;}
+    100%{opacity:0;visibility:hidden;}
+}
+
+/* HEADER */
 header{
     text-align:center;
     padding:20px;
@@ -19,6 +46,7 @@ header{
     color:#e50914;
 }
 
+/* SEZON */
 .season{
     margin:20px;
 }
@@ -28,27 +56,48 @@ header{
     padding-left:10px;
 }
 
+/* ROW */
 .row{
     display:flex;
     overflow-x:auto;
     gap:10px;
 }
 
+/* CARD */
 .card{
     min-width:160px;
     background:#222;
     padding:10px;
     border-radius:10px;
+    transition:0.3s;
+    cursor:pointer;
 }
+
+.card:hover{
+    transform:scale(1.05);
+    background:#e50914;
+}
+
 .card img{
     width:100%;
     height:200px;
     object-fit:cover;
 }
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
 </style>
 </head>
 
 <body>
+
+<!-- INTRO -->
+<div id="intro">
+    <h1>IRKLAR ARASI SAVAŞ</h1>
+</div>
 
 <header>IRKLAR ARASI SAVAŞ</header>
 
@@ -56,9 +105,19 @@ header{
 <div class="season">
 <h2>SEZON 1</h2>
 <div class="row">
+
+<a href="bolum1.html">
 <div class="card"><img src="bolum1.jpg"><p>Bölüm 1</p></div>
+</a>
+
+<a href="bolum2.html">
 <div class="card"><img src="bolum2.jpg"><p>Bölüm 2</p></div>
+</a>
+
+<a href="bolum3.html">
 <div class="card"><img src="bolum3.jpg"><p>Bölüm 3</p></div>
+</a>
+
 </div>
 </div>
 
@@ -66,9 +125,11 @@ header{
 <div class="season">
 <h2>SEZON 2</h2>
 <div class="row">
-<div class="card"><img src="bolum4.jpg"><p>Bölüm 4</p></div>
-<div class="card"><img src="bolum5.jpg"><p>Bölüm 5</p></div>
-<div class="card"><img src="bolum6.jpg"><p>Bölüm 6</p></div>
+
+<a href="bolum4.html"><div class="card"><img src="bolum4.jpg"><p>Bölüm 4</p></div></a>
+<a href="bolum5.html"><div class="card"><img src="bolum5.jpg"><p>Bölüm 5</p></div></a>
+<a href="bolum6.html"><div class="card"><img src="bolum6.jpg"><p>Bölüm 6</p></div></a>
+
 </div>
 </div>
 
@@ -76,16 +137,18 @@ header{
 <div class="season">
 <h2>SEZON 3</h2>
 <div class="row">
-<div class="card"><img src="bolum7.jpg"><p>Bölüm 7</p></div>
-<div class="card"><img src="bolum8.jpg"><p>Bölüm 8</p></div>
-<div class="card"><img src="bolum9.jpg"><p>Bölüm 9</p></div>
-<div class="card"><img src="bolum10.jpg"><p>Bölüm 10</p></div>
-<div class="card"><img src="bolum11.jpg"><p>Bölüm 11</p></div>
-<div class="card"><img src="bolum12.jpg"><p>Bölüm 12</p></div>
-<div class="card"><img src="bolum13.jpg"><p>Bölüm 13</p></div>
-<div class="card"><img src="bolum14.jpg"><p>Bölüm 14</p></div>
-<div class="card"><img src="bolum15.jpg"><p>Bölüm 15</p></div>
-<div class="card"><img src="bolum16.jpg"><p>Bölüm 16</p></div>
+
+<a href="bolum7.html"><div class="card"><img src="bolum7.jpg"><p>Bölüm 7</p></div></a>
+<a href="bolum8.html"><div class="card"><img src="bolum8.jpg"><p>Bölüm 8</p></div></a>
+<a href="bolum9.html"><div class="card"><img src="bolum9.jpg"><p>Bölüm 9</p></div></a>
+<a href="bolum10.html"><div class="card"><img src="bolum10.jpg"><p>Bölüm 10</p></div></a>
+<a href="bolum11.html"><div class="card"><img src="bolum11.jpg"><p>Bölüm 11</p></div></a>
+<a href="bolum12.html"><div class="card"><img src="bolum12.jpg"><p>Bölüm 12</p></div></a>
+<a href="bolum13.html"><div class="card"><img src="bolum13.jpg"><p>Bölüm 13</p></div></a>
+<a href="bolum14.html"><div class="card"><img src="bolum14.jpg"><p>Bölüm 14</p></div></a>
+<a href="bolum15.html"><div class="card"><img src="bolum15.jpg"><p>Bölüm 15</p></div></a>
+<a href="bolum16.html"><div class="card"><img src="bolum16.jpg"><p>Bölüm 16</p></div></a>
+
 </div>
 </div>
 
@@ -93,8 +156,10 @@ header{
 <div class="season">
 <h2>SEZON 4</h2>
 <div class="row">
-<div class="card"><img src="bolum17.jpg"><p>Bölüm 17</p></div>
-<div class="card"><img src="bolum18.jpg"><p>Bölüm 18</p></div>
+
+<a href="bolum17.html"><div class="card"><img src="bolum17.jpg"><p>Bölüm 17</p></div></a>
+<a href="bolum18.html"><div class="card"><img src="bolum18.jpg"><p>Bölüm 18</p></div></a>
+
 </div>
 </div>
 
@@ -102,14 +167,16 @@ header{
 <div class="season">
 <h2>SEZON 5</h2>
 <div class="row">
-<div class="card"><img src="bolum19.jpg"><p>Bölüm 19</p></div>
-<div class="card"><img src="bolum20.jpg"><p>Bölüm 20</p></div>
-<div class="card"><img src="bolum21.jpg"><p>Bölüm 21</p></div>
-<div class="card"><img src="bolum22.jpg"><p>Bölüm 22</p></div>
-<div class="card"><img src="bolum23.jpg"><p>Bölüm 23</p></div>
-<div class="card"><img src="bolum24.jpg"><p>Bölüm 24</p></div>
-<div class="card"><img src="bolum25.jpg"><p>Bölüm 25</p></div>
-<div class="card"><img src="bolum26.jpg"><p>Bölüm 26</p></div>
+
+<a href="bolum19.html"><div class="card"><img src="bolum19.jpg"><p>Bölüm 19</p></div></a>
+<a href="bolum20.html"><div class="card"><img src="bolum20.jpg"><p>Bölüm 20</p></div></a>
+<a href="bolum21.html"><div class="card"><img src="bolum21.jpg"><p>Bölüm 21</p></div></a>
+<a href="bolum22.html"><div class="card"><img src="bolum22.jpg"><p>Bölüm 22</p></div></a>
+<a href="bolum23.html"><div class="card"><img src="bolum23.jpg"><p>Bölüm 23</p></div></a>
+<a href="bolum24.html"><div class="card"><img src="bolum24.jpg"><p>Bölüm 24</p></div></a>
+<a href="bolum25.html"><div class="card"><img src="bolum25.jpg"><p>Bölüm 25</p></div></a>
+<a href="bolum26.html"><div class="card"><img src="bolum26.jpg"><p>Bölüm 26</p></div></a>
+
 </div>
 </div>
 
@@ -117,9 +184,11 @@ header{
 <div class="season">
 <h2>SEZON 6</h2>
 <div class="row">
-<div class="card"><img src="bolum27.jpg"><p>Bölüm 27</p></div>
-<div class="card"><img src="bolum28.jpg"><p>Bölüm 28</p></div>
-<div class="card"><img src="bolum29.jpg"><p>Bölüm 29</p></div>
+
+<a href="bolum27.html"><div class="card"><img src="bolum27.jpg"><p>Bölüm 27</p></div></a>
+<a href="bolum28.html"><div class="card"><img src="bolum28.jpg"><p>Bölüm 28</p></div></a>
+<a href="bolum29.html"><div class="card"><img src="bolum29.jpg"><p>Bölüm 29</p></div></a>
+
 </div>
 </div>
 
